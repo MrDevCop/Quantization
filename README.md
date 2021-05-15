@@ -1,1 +1,4 @@
 # Quantization
+This work guides through the process of `quantization` and `de-quantization` of tensors between the input layers before training of the data. The process of quantization makes the learning faster with the help of GPU. Furthermore, a `quantized` model uses integer tensor instead of floating point tensor for operations. The memory and model size are usually reduced to many folds. But quantization is not all fun and games. It comes with a price which a model pays in terms of accuracy. With quantization, the loss of accuracy is usually occured. Hence its a tradeoff between speed/efficiency and accuracy. 
+
+This colab notebook defines simple functions `quantize_tensor` and `dequantize_tensor` for quantization and dequantization of tensors respectively. Furthermore, these quantized tensors are then used for training of **MNIST** dataset and the accuracy is noted. Later the relation between number of bits (used for quantization) and accuracy is determined.
